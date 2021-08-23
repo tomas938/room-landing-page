@@ -98,7 +98,7 @@ main {
 	}
 }
 header {
-	transition: background-image 0.4s ease-in-out;
+	transition: background-image 0.3s ease-in-out;
 	min-height: 36rem;
 	position: relative;
 	background-repeat: no-repeat;
