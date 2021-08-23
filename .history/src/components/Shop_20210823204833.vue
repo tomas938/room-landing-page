@@ -1,6 +1,8 @@
 <template>
 	<section class="shop">
-		<h1>{{ heading }}</h1>
+		<transition name="slide-fade" appear>
+			<h1>{{ heading }}</h1>
+		</transition>
 		<p>{{ description }}</p>
 		<div class="shop__link">
 			<a href="#">shop now </a>
@@ -22,12 +24,24 @@ export default {
 
 <style lang="scss" scoped>
 @import "/src/scss/variables";
+.slide-fade-enter-active {
+	transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+	transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+	transform: translateX(20px);
+	opacity: 0;
+}
 .shop {
 	@media screen and (min-width: 1000px) {
 		padding: 12rem 3.9rem;
 	}
 	h1 {
-		transition: all 5s ease-in-out;
 		font-size: 2.6rem;
 		font-weight: $bold;
 		@media screen and (min-width: 1000px) {

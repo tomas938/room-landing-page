@@ -1,11 +1,12 @@
 <template>
 	<main class="intro">
-		<header :style="{ backgroundImage: `url(${content[slide].imageDesktop})` }">
+		<header
+			:style="{
+				backgroundImage: `url(${content[slide].imageDesktop})`,
+			}"
+		>
 			<Navigation></Navigation>
-			<Sliders
-				@left-arrow-clicked="goLeft()"
-				@right-arrow-clicked="goRight()"
-			></Sliders>
+			<Sliders></Sliders>
 		</header>
 		<Shop
 			:class="{ deactive: clicked, active: !clicked }"
@@ -53,28 +54,6 @@ export default {
 				},
 			],
 		};
-	},
-	methods: {
-		goRight() {
-			if (!this.clicked) {
-				this.slide === 2 ? (this.slide = 0) : this.slide++;
-				this.clicked = true;
-				setTimeout(() => {
-					this.clicked = false;
-				}, 500);
-			}
-		},
-		goLeft() {
-			{
-				if (!this.clicked) {
-					this.slide === 0 ? (this.slide = 2) : this.slide--;
-					this.clicked = true;
-					setTimeout(() => {
-						this.clicked = false;
-					}, 500);
-				}
-			}
-		},
 	},
 };
 </script>

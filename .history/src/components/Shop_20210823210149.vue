@@ -22,8 +22,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "/src/scss/variables";
+
 .shop {
-	@media screen and (min-width: 1000px) {
+	:style="{
+				transition: 'all .3s ease',
+			}" @media screen and (min-width: 1000px) {
 		padding: 12rem 3.9rem;
 	}
 	h1 {

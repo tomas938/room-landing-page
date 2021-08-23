@@ -1,10 +1,14 @@
 <template>
 	<main class="intro">
-		<header :style="{ backgroundImage: `url(${content[slide].imageDesktop})` }">
+		<header
+			:style="{
+				backgroundImage: `url(${content[slide].imageDesktop})`,
+			}"
+		>
 			<Navigation></Navigation>
 			<Sliders
 				@left-arrow-clicked="goLeft()"
-				@right-arrow-clicked="goRight()"
+				,@left-arrow-clicked="goLeft()"
 			></Sliders>
 		</header>
 		<Shop

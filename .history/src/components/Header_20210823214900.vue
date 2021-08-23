@@ -1,11 +1,27 @@
 <template>
 	<main class="intro">
-		<header :style="{ backgroundImage: `url(${content[slide].imageDesktop})` }">
+		<header
+			:style="{
+				backgroundImage: `url(${content[slide].imageDesktop})`,
+			}"
+		>
 			<Navigation></Navigation>
-			<Sliders
-				@left-arrow-clicked="goLeft()"
-				@right-arrow-clicked="goRight()"
-			></Sliders>
+			<Sliders></Sliders>
+			<!-- <div class="sliders">
+				<div class="slider slider-left" @click="goLeft()">
+					<img
+						src="../../public/assets/icon-angle-left.svg"
+						alt="arrow-right"
+					/>
+				</div>
+
+				<div class="slider slider-right" @click="goRight()">
+					<img
+						src="../../public/assets/icon-angle-right.svg"
+						alt="arrow-right"
+					/>
+				</div>
+			</div> -->
 		</header>
 		<Shop
 			:class="{ deactive: clicked, active: !clicked }"

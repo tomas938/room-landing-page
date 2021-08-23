@@ -22,7 +22,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "/src/scss/variables";
+
 .shop {
+	.active {
+		transform: translateX(-100px);
+	}
 	@media screen and (min-width: 1000px) {
 		padding: 12rem 3.9rem;
 	}

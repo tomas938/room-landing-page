@@ -22,7 +22,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "/src/scss/variables";
+
 .shop {
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
 	@media screen and (min-width: 1000px) {
 		padding: 12rem 3.9rem;
 	}
