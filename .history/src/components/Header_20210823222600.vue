@@ -28,7 +28,7 @@ export default {
 	data() {
 		return {
 			slide: 0,
-			clicked: false,
+			clicked: true,
 			content: [
 				{
 					heading: "Discover innovative ways to decorate ",
@@ -83,7 +83,7 @@ export default {
 @import "/src/scss/variables";
 // CONTENT ANIMATION //
 .deactive {
-	opacity: 0.2;
+	opacity: 0;
 }
 .active {
 	opacity: 1;
