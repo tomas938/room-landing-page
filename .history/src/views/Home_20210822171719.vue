@@ -1,0 +1,33 @@
+<template>
+	<nav class="navigation">
+		<div class="navigation__hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<img src="../assets/logo.svg" alt="" />
+	</nav>
+</template>
+
+<script>
+export default {
+	name: "Home",
+	components: {},
+};
+</script>
+<style scoped lang="scss">
+@import "/src/scss/variables";
+.navigation {
+	height: 10rem;
+	background-color: red;
+	&__hamburger span {
+		width: 10rem;
+		height: 1rem;
+		background: $white;
+	}
+}
+img {
+	width: 5rem;
+	height: 5rem;
+}
+</style>

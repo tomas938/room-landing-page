@@ -1,0 +1,15 @@
+<template>
+	<Header></Header>
+	<
+</template>
+
+<script>
+import Header from "../components/Header";
+import About from "../components/About";
+export default {
+	components: {
+		Header,
+	},
+};
+</script>
+<style scoped lang="scss"></style>
