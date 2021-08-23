@@ -84,11 +84,11 @@ export default {
 // CONTENT ANIMATION //
 .deactive {
 	opacity: 0.2;
-	transition: opacity 0.225s ease-in-out;
+	transition: opacity 0.45s ease-in-out;
 }
 .active {
 	opacity: 1;
-	transition: opacity 0.225s ease-in-out;
+	transition: opacity 0.45s ease-in-out;
 }
 main {
 	min-height: 59.249rem;
