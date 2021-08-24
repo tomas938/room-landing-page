@@ -27,20 +27,6 @@
 			:description="content[slide].description"
 		></Shop>
 	</main>
-	<main class="intro" v-if="slide === 2">
-		<header :style="{ backgroundImage: `url(${content[slide].imageDesktop})` }">
-			<Navigation></Navigation>
-			<Sliders
-				@left-arrow-clicked="goLeft()"
-				@right-arrow-clicked="goRight()"
-			></Sliders>
-		</header>
-		<Shop
-			:class="{ deactive: clicked, active: !clicked }"
-			:heading="content[slide].heading"
-			:description="content[slide].description"
-		></Shop>
-	</main>
 </template>
 
 <script>
@@ -125,6 +111,7 @@ main {
 	}
 }
 header {
+	transition: background-image 0.4s ease-in-out;
 	min-height: 36rem;
 	position: relative;
 	background-repeat: no-repeat;

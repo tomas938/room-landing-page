@@ -109,14 +109,15 @@ export default {
 <style lang="scss" scoped>
 @import "/src/scss/variables";
 // CONTENT ANIMATION //
-.deactive {
-	opacity: 0;
-}
-.active {
-	opacity: 1;
-	transition: opacity 0.45s ease-in-out;
-}
+// .deactive {
+// 	opacity: 0;
+// }
+// .active {
+// 	opacity: 1;
+// 	transition: opacity 0.45s ease-in-out;
+// }
 main {
+	transition: 1s ease-in;
 	min-height: 59.249rem;
 	grid-template-columns: 1fr 1fr;
 	@media screen and (min-width: 1000px) {
@@ -125,6 +126,7 @@ main {
 	}
 }
 header {
+	transition: background-image 0.4s ease-in-out;
 	min-height: 36rem;
 	position: relative;
 	background-repeat: no-repeat;
