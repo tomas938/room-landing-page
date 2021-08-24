@@ -89,19 +89,15 @@ export default {
 			}
 		},
 		changeBg() {
-			this.width = window.innerWidth;
-			if (this.width < 400) {
-				this.desktop = false;
-				return;
-			} else {
-				this.desktop = true;
-				return;
-			}
+			window.addEventListener("resize", () => {
+				this.width = window.innerWidth;
+				if (this.width < 400) {
+					this.desktop = false;
+				} else {
+					this.desktop = true;
+				}
+			});
 		},
-	},
-	created() {
-		window.addEventListener("resize", this.changeBg);
-		this.changeBg();
 	},
 };
 </script>

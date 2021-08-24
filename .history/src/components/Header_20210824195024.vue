@@ -88,20 +88,18 @@ export default {
 				}
 			}
 		},
-		changeBg() {
-			this.width = window.innerWidth;
-			if (this.width < 400) {
+	},
+	mounted() {
+		this.width = window.innerWidth;
+		window.addEventListener("resize", () => {
+			if (this.width < 420) {
 				this.desktop = false;
 				return;
 			} else {
 				this.desktop = true;
 				return;
 			}
-		},
-	},
-	created() {
-		window.addEventListener("resize", this.changeBg);
-		this.changeBg();
+		});
 	},
 };
 </script>

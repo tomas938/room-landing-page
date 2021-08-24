@@ -2,9 +2,7 @@
 	<main class="intro">
 		<header
 			:style="{
-				backgroundImage: desktop
-					? `url(${content[slide].imageDesktop})`
-					: `url(${content[slide].imageMobile})`,
+				backgroundImage: `if(${desktop}) ? url(${content[slide].imageDesktop}) : url(${content[slide].imageMobile})`,
 			}"
 			:class="{ deactive: clicked, active: !clicked }"
 		>
@@ -36,8 +34,7 @@ export default {
 		return {
 			slide: 0,
 			clicked: false,
-			desktop: null,
-			width: null,
+			dekstop: false,
 			content: [
 				{
 					heading: "Discover innovative ways to decorate ",
@@ -88,20 +85,6 @@ export default {
 				}
 			}
 		},
-		changeBg() {
-			this.width = window.innerWidth;
-			if (this.width < 400) {
-				this.desktop = false;
-				return;
-			} else {
-				this.desktop = true;
-				return;
-			}
-		},
-	},
-	created() {
-		window.addEventListener("resize", this.changeBg);
-		this.changeBg();
 	},
 };
 </script>

@@ -36,8 +36,7 @@ export default {
 		return {
 			slide: 0,
 			clicked: false,
-			desktop: null,
-			width: null,
+			desktop: true,
 			content: [
 				{
 					heading: "Discover innovative ways to decorate ",
@@ -88,20 +87,9 @@ export default {
 				}
 			}
 		},
-		changeBg() {
-			this.width = window.innerWidth;
-			if (this.width < 400) {
-				this.desktop = false;
-				return;
-			} else {
-				this.desktop = true;
-				return;
-			}
-		},
 	},
-	created() {
-		window.addEventListener("resize", this.changeBg);
-		this.changeBg();
+	mounted() {
+		console.log(this.content[1].imageDesktop);
 	},
 };
 </script>

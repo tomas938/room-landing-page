@@ -90,6 +90,7 @@ export default {
 		},
 		changeBg() {
 			this.width = window.innerWidth;
+
 			if (this.width < 400) {
 				this.desktop = false;
 				return;
@@ -98,10 +99,6 @@ export default {
 				return;
 			}
 		},
-	},
-	created() {
-		window.addEventListener("resize", this.changeBg);
-		this.changeBg();
 	},
 };
 </script>

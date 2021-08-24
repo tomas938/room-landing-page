@@ -100,8 +100,8 @@ export default {
 		},
 	},
 	created() {
-		window.addEventListener("resize", this.changeBg);
-		this.changeBg();
+		window.addEventListener("resize", this.checkScreenSize);
+		this.checkScreenSize();
 	},
 };
 </script>

@@ -88,8 +88,10 @@ export default {
 				}
 			}
 		},
-		changeBg() {
-			this.width = window.innerWidth;
+	},
+	mounted() {
+		this.width = window.innerWidth;
+		window.addEventListener("resize", () => {
 			if (this.width < 400) {
 				this.desktop = false;
 				return;
@@ -97,11 +99,7 @@ export default {
 				this.desktop = true;
 				return;
 			}
-		},
-	},
-	created() {
-		window.addEventListener("resize", this.changeBg);
-		this.changeBg();
+		});
 	},
 };
 </script>

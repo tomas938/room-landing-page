@@ -99,10 +99,6 @@ export default {
 			}
 		},
 	},
-	created() {
-		window.addEventListener("resize", this.changeBg);
-		this.changeBg();
-	},
 };
 </script>
 <style lang="scss" scoped>
