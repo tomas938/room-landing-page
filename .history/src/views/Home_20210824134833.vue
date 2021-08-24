@@ -7,7 +7,7 @@
 <script>
 import Header from "../components/Header";
 import About from "../components/About";
-import Preloader from "../components/Preloader";
+import Preloader from "../components/About";
 export default {
 	components: {
 		Header,
