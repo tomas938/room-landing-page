@@ -99,16 +99,16 @@ export default {
 }
 .active {
 	opacity: 1;
-	transition: opacity 0.45s ease-in-out;
+	transition: opacity 0.45s ease-out;
 }
 .textdeactive {
 	opacity: 0;
 	transform: translateX(100%);
-	transition: 0.5s ease-in;
+	transition: 0.45s ease-out;
 }
 .textactive {
 	opacity: 1;
-	transition: all 0.9s ease-out;
+	transition: all 1s ease-in;
 }
 main {
 	overflow: hidden;

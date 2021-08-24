@@ -108,7 +108,7 @@ export default {
 }
 .textactive {
 	opacity: 1;
-	transition: all 0.9s ease-out;
+	transition: all 0.9s ease-in;
 }
 main {
 	overflow: hidden;

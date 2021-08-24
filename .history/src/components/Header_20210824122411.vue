@@ -62,11 +62,11 @@ export default {
 			if (!this.clicked) {
 				setTimeout(() => {
 					this.slide === 2 ? (this.slide = 0) : this.slide++;
-				}, 500);
+				}, 800);
 				this.clicked = true;
 				setTimeout(() => {
 					this.clicked = false;
-				}, 500);
+				}, 800);
 			}
 		},
 		goLeft() {
@@ -74,11 +74,11 @@ export default {
 				if (!this.clicked) {
 					setTimeout(() => {
 						this.slide === 0 ? (this.slide = 2) : this.slide--;
-					}, 500);
+					}, 800);
 					this.clicked = true;
 					setTimeout(() => {
 						this.clicked = false;
-					}, 500);
+					}, 800);
 				}
 			}
 		},
@@ -104,11 +104,11 @@ export default {
 .textdeactive {
 	opacity: 0;
 	transform: translateX(100%);
-	transition: 0.5s ease-in;
+	transition: 0.75s ease-out;
 }
 .textactive {
 	opacity: 1;
-	transition: all 0.9s ease-out;
+	transition: all 0.45s ease-in;
 }
 main {
 	overflow: hidden;
