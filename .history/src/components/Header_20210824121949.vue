@@ -62,7 +62,7 @@ export default {
 			if (!this.clicked) {
 				setTimeout(() => {
 					this.slide === 2 ? (this.slide = 0) : this.slide++;
-				}, 500);
+				}, 700);
 				this.clicked = true;
 				setTimeout(() => {
 					this.clicked = false;
@@ -102,7 +102,7 @@ export default {
 .textdeactive {
 	opacity: 0;
 	transform: translateX(100%);
-	transition: 0.45s ease-out;
+	transition: 0.65s ease-out;
 }
 .textactive {
 	opacity: 1;

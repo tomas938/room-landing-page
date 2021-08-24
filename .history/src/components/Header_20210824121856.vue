@@ -102,11 +102,11 @@ export default {
 .textdeactive {
 	opacity: 0;
 	transform: translateX(100%);
-	transition: 0.45s ease-out;
+	transition: 0.45s ease-in-out;
 }
 .textactive {
 	opacity: 1;
-	transition: all 1s ease-in;
+	transition: all 1s ease-in-out;
 }
 main {
 	overflow: hidden;

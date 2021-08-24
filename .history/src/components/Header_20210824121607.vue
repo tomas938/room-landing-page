@@ -11,7 +11,6 @@
 			></Sliders>
 		</header>
 		<Shop
-			:class="{ textdeactive: clicked, textactive: !clicked }"
 			:heading="content[slide].heading"
 			:description="content[slide].description"
 		></Shop>
@@ -99,17 +98,7 @@ export default {
 	opacity: 1;
 	transition: opacity 0.45s ease-in-out;
 }
-.textdeactive {
-	opacity: 0;
-	transform: translateX(100%);
-	transition: 0.45s ease-out;
-}
-.textactive {
-	opacity: 1;
-	transition: all 1s ease-in;
-}
 main {
-	overflow: hidden;
 	min-height: 59.249rem;
 	grid-template-columns: 1fr 1fr;
 	@media screen and (min-width: 1000px) {

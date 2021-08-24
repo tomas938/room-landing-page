@@ -102,7 +102,7 @@ export default {
 .textdeactive {
 	opacity: 0;
 	transform: translateX(100%);
-	transition: 0.45s ease-out;
+	transition: 0.65s ease-out;
 }
 .textactive {
 	opacity: 1;

@@ -11,7 +11,7 @@
 			></Sliders>
 		</header>
 		<Shop
-			:class="{ textdeactive: clicked, textactive: !clicked }"
+			:class="{ deactive: clicked, active: !clicked }"
 			:heading="content[slide].heading"
 			:description="content[slide].description"
 		></Shop>
@@ -60,9 +60,7 @@ export default {
 	methods: {
 		goRight() {
 			if (!this.clicked) {
-				setTimeout(() => {
-					this.slide === 2 ? (this.slide = 0) : this.slide++;
-				}, 500);
+				this.slide === 2 ? (this.slide = 0) : this.slide++;
 				this.clicked = true;
 				setTimeout(() => {
 					this.clicked = false;
@@ -93,23 +91,13 @@ export default {
 // CONTENT ANIMATION //
 .deactive {
 	opacity: 0;
-	transition: 0.45s ease-in-out;
+	transition: opacity 0.45s ease-in-out;
 }
 .active {
 	opacity: 1;
 	transition: opacity 0.45s ease-in-out;
 }
-.textdeactive {
-	opacity: 0;
-	transform: translateX(100%);
-	transition: 0.45s ease-out;
-}
-.textactive {
-	opacity: 1;
-	transition: all 1s ease-in;
-}
 main {
-	overflow: hidden;
 	min-height: 59.249rem;
 	grid-template-columns: 1fr 1fr;
 	@media screen and (min-width: 1000px) {
@@ -119,6 +107,7 @@ main {
 }
 header {
 	min-height: 36rem;
+	transition: all 0.45s ease-in;
 	position: relative;
 	background-repeat: no-repeat;
 	background-size: cover;
