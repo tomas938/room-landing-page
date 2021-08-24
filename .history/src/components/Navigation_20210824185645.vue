@@ -28,7 +28,7 @@
 				@click="toggleMobileNav"
 				v-show="mobile"
 			>
-				<svg class="line" width="60" height="60" viewBox="0 0 100 100">
+				<svg class="line" width="70" height="70" viewBox="0 0 100 100">
 					<path
 						class="line line1"
 						:class="{ active: mobileNav }"
@@ -120,9 +120,6 @@ header {
 		@media screen and (max-width: 1000px) {
 			display: flex;
 			justify-content: space-between;
-		}
-		@media screen and (max-width: 400px) {
-			gap: 0rem;
 		}
 		img {
 			position: relative;

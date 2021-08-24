@@ -28,7 +28,7 @@
 				@click="toggleMobileNav"
 				v-show="mobile"
 			>
-				<svg class="line" width="60" height="60" viewBox="0 0 100 100">
+				<svg class="line" width="75" height="75" viewBox="0 0 100 100">
 					<path
 						class="line line1"
 						:class="{ active: mobileNav }"
@@ -121,9 +121,6 @@ header {
 			display: flex;
 			justify-content: space-between;
 		}
-		@media screen and (max-width: 400px) {
-			gap: 0rem;
-		}
 		img {
 			position: relative;
 			width: 8rem;
@@ -149,7 +146,7 @@ header {
 		&__hamburger {
 			position: relative;
 			cursor: pointer;
-			z-index: 2;
+			z-index: 2; ///***SHOW HAMBURGER WHILE ACTIVE STATE ***///
 
 			.line {
 				fill: none;
@@ -190,11 +187,15 @@ header {
 		}
 	}
 }
+//********************************************************************************//
+///////////////////////////******* ACTIVE CLASS ********////////////////////////
+//********************************************************************************//
 .mobile__links {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 0;
+	// z-index: -1; ///*** IF U WANT TO SEE NAVBAR WHILE ACTIVE STATE ***///
+	z-index: 0; //***HIDE NAVBAR***/
 	width: 100vw;
 	min-height: 100vh;
 	padding-top: 15rem;

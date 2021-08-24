@@ -2,22 +2,25 @@
 	<header>
 		<nav class="navigation">
 			<div class="navigation__logo">
+				<!-- //********************************************************************************//
+				///////////////////////////******* CHANGE LOGO ********////////////////////////
+				//********************************************************************************// !-->
 				<img src="../../public/assets/logo.svg" alt="" />
 			</div>
 			<div class="navigation__links">
 				<ul v-show="!mobile">
+					<!-- //********************************************************************************//
+				///////////////////////////******* ADD DESKTOP LINKS ********////////////////////////
+				//********************************************************************************// !-->
 					<li>
-						<router-link class="link" :to="{ name: 'Home' }">home</router-link>
+						<router-link class="link" :to="{ name: 'Home' }">Home</router-link>
 					</li>
 					<li>
-						<router-link class="link" :to="{ name: 'Home' }">shop</router-link>
-					</li>
-					<li>
-						<router-link class="link" :to="{ name: 'Home' }">about</router-link>
+						<router-link class="link" :to="{ name: 'Home' }">About</router-link>
 					</li>
 					<li>
 						<router-link class="link" :to="{ name: 'Home' }"
-							>contact</router-link
+							>Contact</router-link
 						>
 					</li>
 				</ul>
@@ -28,7 +31,10 @@
 				@click="toggleMobileNav"
 				v-show="mobile"
 			>
-				<svg class="line" width="60" height="60" viewBox="0 0 100 100">
+				<!-- //********************************************************************************//
+				///////////////////////////******* CHANGE HAMBURGER ********////////////////////////
+				//********************************************************************************// !-->
+				<svg class="line" width="75" height="75" viewBox="0 0 100 100">
 					<path
 						class="line line1"
 						:class="{ active: mobileNav }"
@@ -53,17 +59,17 @@
 				:class="{ active: mobileNav }"
 				v-show="mobileNav"
 			>
+				<!-- //********************************************************************************//
+				///////////////////////////******* ADD MOBILE LINKS ********////////////////////////
+				//********************************************************************************// !-->
 				<li>
-					<router-link class="link" :to="{ name: 'Home' }">home</router-link>
+					<router-link class="link" :to="{ name: 'Home' }">Home</router-link>
 				</li>
 				<li>
-					<router-link class="link" :to="{ name: 'Home' }">shop</router-link>
+					<router-link class="link" :to="{ name: 'Home' }">About</router-link>
 				</li>
 				<li>
-					<router-link class="link" :to="{ name: 'Home' }">about</router-link>
-				</li>
-				<li>
-					<router-link class="link" :to="{ name: 'Home' }">contact</router-link>
+					<router-link class="link" :to="{ name: 'Home' }">Contact</router-link>
 				</li>
 			</ul>
 		</div>
@@ -116,19 +122,16 @@ header {
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		gap: 8rem;
+		gap: 4rem;
 		@media screen and (max-width: 1000px) {
 			display: flex;
 			justify-content: space-between;
 		}
-		@media screen and (max-width: 400px) {
-			gap: 0rem;
-		}
 		img {
-			position: relative;
+			position: relative; ///***NEED FOR Z-INDEX***/
 			width: 8rem;
 			height: 2rem;
-			z-index: 2;
+			z-index: 1;
 		}
 		&__links {
 			ul {
@@ -140,20 +143,23 @@ header {
 					}
 				}
 				a {
-					font-size: 1.6rem;
 					text-decoration: none;
-					color: $white;
+					color: 		color: $white;
+;
 				}
 			}
 		}
 		&__hamburger {
 			position: relative;
 			cursor: pointer;
-			z-index: 2;
+			z-index: 1; ///***SHOW HAMBURGER WHILE ACTIVE STATE ***///
 
 			.line {
+				//********************************************************************************//
+				///////////////////////////******* CHANGE HAMBURGER ********////////////////////////
+				//********************************************************************************//
 				fill: none;
-				stroke: $white;
+				stroke: $hamburger-color;
 				stroke-width: 6;
 				transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
 					stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -190,11 +196,15 @@ header {
 		}
 	}
 }
+//********************************************************************************//
+///////////////////////////******* ACTIVE CLASS ********////////////////////////
+//********************************************************************************//
 .mobile__links {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 0;
+	// z-index: -1; ///*** IF U WANT TO SEE NAVBAR WHILE ACTIVE STATE ***///
+	z-index: 0; //***HIDE NAVBAR***/
 	width: 100vw;
 	min-height: 100vh;
 	padding-top: 15rem;
@@ -209,13 +219,10 @@ header {
 		text-align: center;
 	}
 	a {
-		text-decoration: none;
-		color: $white;
 		font-size: 1.8rem;
 	}
 }
 .active {
-	z-index: 1;
 	visibility: visible;
 	opacity: 1;
 	transition: all 0.6s linear;

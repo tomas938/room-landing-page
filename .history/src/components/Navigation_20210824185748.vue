@@ -122,7 +122,7 @@ header {
 			justify-content: space-between;
 		}
 		@media screen and (max-width: 400px) {
-			gap: 0rem;
+			gap: 8rem;
 		}
 		img {
 			position: relative;
