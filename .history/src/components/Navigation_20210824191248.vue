@@ -1,9 +1,9 @@
 <template>
 	<header>
 		<nav class="navigation">
-			<div class="navigation__logo">
+			<a class="navigation__logo">
 				<img src="../../public/assets/logo.svg" alt="" />
-			</div>
+			</a>
 			<div class="navigation__links">
 				<ul v-show="!mobile">
 					<li>
@@ -130,7 +130,6 @@ header {
 			height: 2rem;
 			z-index: 2;
 		}
-
 		&__links {
 			ul {
 				display: flex;
@@ -176,6 +175,7 @@ header {
 			position: relative;
 			cursor: pointer;
 			z-index: 2;
+
 			.line {
 				fill: none;
 				stroke: $white;
@@ -237,10 +237,6 @@ header {
 		text-decoration: none;
 		color: $white;
 		font-size: 1.8rem;
-		outline: none;
-		&:focus {
-			border: 2px dotted $white;
-		}
 	}
 }
 .active {

@@ -130,7 +130,6 @@ header {
 			height: 2rem;
 			z-index: 2;
 		}
-
 		&__links {
 			ul {
 				display: flex;
@@ -141,13 +140,12 @@ header {
 					}
 				}
 				a {
-					outline: none;
 					font-size: 1.7rem;
 					text-decoration: none;
 					color: $white;
 					position: relative;
 					&:focus {
-						border: 2px dotted $black;
+						border: 2px dotted $white;
 					}
 					&:hover {
 						transition: 0.2s ease-in-out;
@@ -176,6 +174,7 @@ header {
 			position: relative;
 			cursor: pointer;
 			z-index: 2;
+
 			.line {
 				fill: none;
 				stroke: $white;
@@ -237,10 +236,6 @@ header {
 		text-decoration: none;
 		color: $white;
 		font-size: 1.8rem;
-		outline: none;
-		&:focus {
-			border: 2px dotted $white;
-		}
 	}
 }
 .active {

@@ -14,10 +14,6 @@
 button {
 	border: none;
 	outline: none;
-	background-color: $black;
-	&:focus {
-		border: 2px dotted $white;
-	}
 }
 .sliders {
 	position: absolute;

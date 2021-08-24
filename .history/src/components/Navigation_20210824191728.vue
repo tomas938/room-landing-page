@@ -1,9 +1,9 @@
 <template>
 	<header>
 		<nav class="navigation">
-			<div class="navigation__logo">
+			<a class="navigation__logo">
 				<img src="../../public/assets/logo.svg" alt="" />
-			</div>
+			</a>
 			<div class="navigation__links">
 				<ul v-show="!mobile">
 					<li>
@@ -130,7 +130,11 @@ header {
 			height: 2rem;
 			z-index: 2;
 		}
-
+		&__logo {
+			a {
+				outline: noen;
+			}
+		}
 		&__links {
 			ul {
 				display: flex;

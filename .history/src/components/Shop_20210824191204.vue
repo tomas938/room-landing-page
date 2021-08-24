@@ -68,10 +68,6 @@ export default {
 			color: $black;
 			text-decoration: none;
 			text-transform: uppercase;
-			outline: none;
-			&:focus {
-				border: 2px dotted $black;
-			}
 		}
 	}
 }

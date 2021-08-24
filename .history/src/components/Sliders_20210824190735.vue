@@ -11,14 +11,6 @@
 
 <style lang="scss" scoped>
 @import "/src/scss/variables";
-button {
-	border: none;
-	outline: none;
-	background-color: $black;
-	&:focus {
-		border: 2px dotted $white;
-	}
-}
 .sliders {
 	position: absolute;
 	bottom: 0;

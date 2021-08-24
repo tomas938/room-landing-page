@@ -16,7 +16,7 @@ button {
 	outline: none;
 	background-color: $black;
 	&:focus {
-		border: 2px dotted $white;
+		border: 1px dotted;
 	}
 }
 .sliders {

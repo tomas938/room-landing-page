@@ -130,7 +130,6 @@ header {
 			height: 2rem;
 			z-index: 2;
 		}
-
 		&__links {
 			ul {
 				display: flex;
@@ -141,19 +140,16 @@ header {
 					}
 				}
 				a {
-					outline: none;
 					font-size: 1.7rem;
 					text-decoration: none;
 					color: $white;
 					position: relative;
-					&:focus {
-						border: 2px dotted $black;
-					}
 					&:hover {
+						color: rgb(250, 29, 21);
 						transition: 0.2s ease-in-out;
 						&:after {
 							opacity: 1;
-							background: $white;
+							background: rgb(185, 22, 22);
 							transition: all 0.4s ease-in-out;
 							transform: scaleX(1);
 						}
@@ -162,7 +158,7 @@ header {
 						content: "";
 						position: absolute;
 						width: 120%;
-						height: 3px;
+						height: 2px;
 						top: 32px;
 						left: -10%;
 						right: 10%;
@@ -176,6 +172,7 @@ header {
 			position: relative;
 			cursor: pointer;
 			z-index: 2;
+
 			.line {
 				fill: none;
 				stroke: $white;
@@ -237,10 +234,6 @@ header {
 		text-decoration: none;
 		color: $white;
 		font-size: 1.8rem;
-		outline: none;
-		&:focus {
-			border: 2px dotted $white;
-		}
 	}
 }
 .active {

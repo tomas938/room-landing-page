@@ -130,7 +130,6 @@ header {
 			height: 2rem;
 			z-index: 2;
 		}
-
 		&__links {
 			ul {
 				display: flex;

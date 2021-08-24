@@ -130,7 +130,6 @@ header {
 			height: 2rem;
 			z-index: 2;
 		}
-
 		&__links {
 			ul {
 				display: flex;
@@ -141,34 +140,9 @@ header {
 					}
 				}
 				a {
-					outline: none;
-					font-size: 1.7rem;
+					font-size: 2rem;
 					text-decoration: none;
 					color: $white;
-					position: relative;
-					&:focus {
-						border: 2px dotted $black;
-					}
-					&:hover {
-						transition: 0.2s ease-in-out;
-						&:after {
-							opacity: 1;
-							background: $white;
-							transition: all 0.4s ease-in-out;
-							transform: scaleX(1);
-						}
-					}
-					&:after {
-						content: "";
-						position: absolute;
-						width: 120%;
-						height: 3px;
-						top: 32px;
-						left: -10%;
-						right: 10%;
-						opacity: 0;
-						transform: scaleX(0);
-					}
 				}
 			}
 		}
@@ -176,6 +150,7 @@ header {
 			position: relative;
 			cursor: pointer;
 			z-index: 2;
+
 			.line {
 				fill: none;
 				stroke: $white;
@@ -237,10 +212,6 @@ header {
 		text-decoration: none;
 		color: $white;
 		font-size: 1.8rem;
-		outline: none;
-		&:focus {
-			border: 2px dotted $white;
-		}
 	}
 }
 .active {

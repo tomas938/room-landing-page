@@ -130,7 +130,6 @@ header {
 			height: 2rem;
 			z-index: 2;
 		}
-
 		&__links {
 			ul {
 				display: flex;
@@ -237,9 +236,8 @@ header {
 		text-decoration: none;
 		color: $white;
 		font-size: 1.8rem;
-		outline: none;
 		&:focus {
-			border: 2px dotted $white;
+			border: 2px dotted $black;
 		}
 	}
 }
