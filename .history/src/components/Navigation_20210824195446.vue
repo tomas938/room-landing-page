@@ -2,7 +2,7 @@
 	<header>
 		<nav class="navigation">
 			<div class="navigation__logo">
-				<img src="../../public/assets/logo.svg" alt="logo" />
+				<img src="../../public/assets/logo.svg" alt="" />
 			</div>
 			<div class="navigation__links">
 				<ul v-show="!mobile">
@@ -22,6 +22,7 @@
 					</li>
 				</ul>
 			</div>
+
 			<div
 				class="navigation__hamburger"
 				@click="toggleMobileNav"
@@ -71,7 +72,7 @@
 
 <script>
 export default {
-	name: "Navigation",
+	name: "Navigation5",
 	data() {
 		return {
 			mobile: null,

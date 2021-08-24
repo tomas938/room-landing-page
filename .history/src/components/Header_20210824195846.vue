@@ -5,7 +5,6 @@
 				backgroundImage: desktop
 					? `url(${content[slide].imageDesktop})`
 					: `url(${content[slide].imageMobile})`,
-				title: `${content[slide].label}`,
 			}"
 			:class="{ deactive: clicked, active: !clicked }"
 		>
@@ -62,7 +61,7 @@ export default {
 						" Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office. ",
 					imageDesktop: "../assets/desktop-image-hero-3.jpg",
 					imageMobile: "../assets/mobile-image-hero-3.jpg",
-					label: "black chair",
+					label: "white chairs and table",
 				},
 			],
 		};
@@ -106,7 +105,6 @@ export default {
 	created() {
 		window.addEventListener("resize", this.changeBg);
 		this.changeBg();
-		console.log(this.content[1].label);
 	},
 };
 </script>

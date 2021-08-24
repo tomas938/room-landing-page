@@ -5,7 +5,7 @@
 				backgroundImage: desktop
 					? `url(${content[slide].imageDesktop})`
 					: `url(${content[slide].imageMobile})`,
-				title: `${content[slide].label}`,
+				ariaLabel: `${content[slide].imageMobile}`,
 			}"
 			:class="{ deactive: clicked, active: !clicked }"
 		>
@@ -106,7 +106,6 @@ export default {
 	created() {
 		window.addEventListener("resize", this.changeBg);
 		this.changeBg();
-		console.log(this.content[1].label);
 	},
 };
 </script>

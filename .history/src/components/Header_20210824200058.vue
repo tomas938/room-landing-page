@@ -106,7 +106,6 @@ export default {
 	created() {
 		window.addEventListener("resize", this.changeBg);
 		this.changeBg();
-		console.log(this.content[1].label);
 	},
 };
 </script>
