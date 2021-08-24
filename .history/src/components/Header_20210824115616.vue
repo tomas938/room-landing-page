@@ -125,10 +125,9 @@ main {
 	}
 }
 header {
-	background: url("../../public/assets/desktop-image-hero-1.jpg") no-repeat -9999px -9999px;
-	background: url("../../public/assets/desktop-image-hero-2.jpg") no-repeat -9999px -9999px;
-	background: url("../../public/assets/desktop-image-hero-3.jpg") no-repeat -9999px -9999px;
-	transition: backgroundImage 0.45s ease-in-out;
+	background:background: url("../../public/assets/desktop-image-hero-1.jpg") no-repeat ; -9999px -9999px;
+	background: url("/public/assets/desktop-image-hero-1.jpg") no-repeat -9999px -9999px;
+	background: url("/public/assets/desktop-image-hero-1.jpg") no-repeat -9999px -9999px;
 	min-height: 36rem;
 	position: relative;
 	background-repeat: no-repeat;
