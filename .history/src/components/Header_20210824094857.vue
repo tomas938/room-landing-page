@@ -100,7 +100,7 @@ main {
 	}
 }
 header {
-	background-color: rgb(153, 151, 151);
+	background-color: re;
 	transition: background-image 0.4s ease-in-out;
 	min-height: 36rem;
 	position: relative;

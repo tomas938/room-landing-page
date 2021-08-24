@@ -37,7 +37,7 @@ export default {
 					heading: "Discover innovative ways to decorate ",
 					description:
 						"We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.",
-					imageDesktop: "../assets/desktop-image-hero-1.jpg",
+					imageDesktop: "@/assets/desktop-image-hero-1.jpg",
 					imageMobile: "../assets/mobile-image-hero-1.jpg",
 				},
 				{
@@ -100,7 +100,6 @@ main {
 	}
 }
 header {
-	background-color: rgb(153, 151, 151);
 	transition: background-image 0.4s ease-in-out;
 	min-height: 36rem;
 	position: relative;

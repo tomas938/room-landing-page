@@ -38,7 +38,7 @@ export default {
 					description:
 						"We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.",
 					imageDesktop: "../assets/desktop-image-hero-1.jpg",
-					imageMobile: "../assets/mobile-image-hero-1.jpg",
+					imageMobile: url(../assets/mobile-image-hero-1.jpg),
 				},
 				{
 					heading: "We are available all across the globe",
@@ -79,6 +79,9 @@ export default {
 			}
 		},
 	},
+	mounted() {
+		console.log(this.content[1].imageDesktop);
+	},
 };
 </script>
 <style lang="scss" scoped>
@@ -100,7 +103,6 @@ main {
 	}
 }
 header {
-	background-color: rgb(153, 151, 151);
 	transition: background-image 0.4s ease-in-out;
 	min-height: 36rem;
 	position: relative;

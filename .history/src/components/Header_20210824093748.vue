@@ -3,6 +3,8 @@
 		<header
 			rel="preload"
 			:style="{ backgroundImage: `url(${content[slide].imageDesktop})` }"
+			ä
+			:class="{ deactive: clicked, active: !clicked }"
 		>
 			<Navigation></Navigation>
 			<Sliders
@@ -81,6 +83,7 @@ export default {
 	},
 };
 </script>
+
 <style lang="scss" scoped>
 @import "/src/scss/variables";
 // CONTENT ANIMATION //
@@ -100,8 +103,7 @@ main {
 	}
 }
 header {
-	background-color: rgb(153, 151, 151);
-	transition: background-image 0.4s ease-in-out;
+	// transition: background-image 0.4s ease-in-out;
 	min-height: 36rem;
 	position: relative;
 	background-repeat: no-repeat;
