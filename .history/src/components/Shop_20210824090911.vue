@@ -11,21 +11,9 @@
 				/>
 			</svg>
 		</div>
-		<img
-			src="/public/assets/desktop-image-hero-1.jpg"
-			alt=""
-			style="display: none"
-		/>
-		<img
-			src="/public/assets/desktop-image-hero-2.jpg"
-			alt=""
-			style="display: none"
-		/>
-		<img
-			src="/public/assets/desktop-image-hero-3.jpg"
-			alt=""
-			style="display: none"
-		/>
+		<img src="/public/assets/desktop-image-hero-1.jpg" alt="" />
+		<img src="/public/assets/desktop-image-hero-2.jpg" alt="" />
+		<img src="/public/assets/desktop-image-hero-3.jpg" alt="" />
 	</section>
 </template>
 

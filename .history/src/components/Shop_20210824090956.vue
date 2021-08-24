@@ -16,16 +16,8 @@
 			alt=""
 			style="display: none"
 		/>
-		<img
-			src="/public/assets/desktop-image-hero-2.jpg"
-			alt=""
-			style="display: none"
-		/>
-		<img
-			src="/public/assets/desktop-image-hero-3.jpg"
-			alt=""
-			style="display: none"
-		/>
+		<img src="/public/assets/desktop-image-hero-2.jpg" alt="" display: none />
+		<img src="/public/assets/desktop-image-hero-3.jpg" alt="" display: none />
 	</section>
 </template>
 
