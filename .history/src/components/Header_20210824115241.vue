@@ -125,9 +125,12 @@ main {
 	}
 }
 header {
-	background: url("/public/assets/desktop-image-hero-1.jpg") no-repeat -9999px -9999px;
-	background: url("/public/assets/desktop-image-hero-2.jpg") no-repeat -9999px -9999px;
-	background: url("/public/assets/desktop-image-hero-3.jpg") no-repeat -9999px -9999px;
+		background: url(http://domain.tld/image-01.png) no-repeat -9999px -9999px;
+	}
+		background: url(http://domain.tld/image-02.png) no-repeat -9999px -9999px;
+	}
+		background: url(http://domain.tld/image-03.png) no-repeat -9999px -9999px;
+	}
 	min-height: 36rem;
 	position: relative;
 	background-repeat: no-repeat;
