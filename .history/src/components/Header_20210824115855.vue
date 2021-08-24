@@ -1,5 +1,33 @@
 <template>
-	<main class="intro">
+	<main class="intro" v-if="slide === 0">
+		<header :style="{ backgroundImage: `url(${content[slide].imageDesktop})` }">
+			<Navigation></Navigation>
+			<Sliders
+				@left-arrow-clicked="goLeft()"
+				@right-arrow-clicked="goRight()"
+			></Sliders>
+		</header>
+		<Shop
+			:class="{ deactive: clicked, active: !clicked }"
+			:heading="content[slide].heading"
+			:description="content[slide].description"
+		></Shop>
+	</main>
+	<main class="intro" v-if="slide === 1">
+		<header :style="{ backgroundImage: `url(${content[slide].imageDesktop})` }">
+			<Navigation></Navigation>
+			<Sliders
+				@left-arrow-clicked="goLeft()"
+				@right-arrow-clicked="goRight()"
+			></Sliders>
+		</header>
+		<Shop
+			:class="{ deactive: clicked, active: !clicked }"
+			:heading="content[slide].heading"
+			:description="content[slide].description"
+		></Shop>
+	</main>
+	<main class="intro" v-if="slide === 2">
 		<header :style="{ backgroundImage: `url(${content[slide].imageDesktop})` }">
 			<Navigation></Navigation>
 			<Sliders
@@ -76,11 +104,6 @@ export default {
 			}
 		},
 	},
-	created() {
-		for (let i = 0; i < 2; i++) {
-			this.slide += i;
-		}
-	},
 };
 </script>
 <style lang="scss" scoped>
@@ -102,8 +125,8 @@ main {
 	}
 }
 header {
+	transition: backgroundImage 0.45s ease-in-out;
 	min-height: 36rem;
-	transition: all 0.45s ease-in;
 	position: relative;
 	background-repeat: no-repeat;
 	background-size: cover;

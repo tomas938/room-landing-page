@@ -76,11 +76,6 @@ export default {
 			}
 		},
 	},
-	created() {
-		for (let i = 0; i < 2; i++) {
-			this.slide += i;
-		}
-	},
 };
 </script>
 <style lang="scss" scoped>
@@ -103,7 +98,7 @@ main {
 }
 header {
 	min-height: 36rem;
-	transition: all 0.45s ease-in;
+	transition: 0.45s ease-in;
 	position: relative;
 	background-repeat: no-repeat;
 	background-size: cover;

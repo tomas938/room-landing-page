@@ -77,7 +77,7 @@ export default {
 		},
 	},
 	created() {
-		for (let i = 0; i < 2; i++) {
+		for (let i = 0; i < 3; i++) {
 			this.slide += i;
 		}
 	},

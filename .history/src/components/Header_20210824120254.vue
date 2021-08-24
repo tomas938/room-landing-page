@@ -77,10 +77,9 @@ export default {
 		},
 	},
 	created() {
-		for (let i = 0; i < 2; i++) {
-			this.slide += i;
-		}
-	},
+		for(i = 0;)
+	}
+
 };
 </script>
 <style lang="scss" scoped>

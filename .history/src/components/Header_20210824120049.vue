@@ -1,5 +1,6 @@
 <template>
-	<main class="intro">
+	<main class="intro" v-if="slide === 0">
+		:class="{ deactive: clicked, active: !clicked }"
 		<header :style="{ backgroundImage: `url(${content[slide].imageDesktop})` }">
 			<Navigation></Navigation>
 			<Sliders
@@ -76,11 +77,6 @@ export default {
 			}
 		},
 	},
-	created() {
-		for (let i = 0; i < 2; i++) {
-			this.slide += i;
-		}
-	},
 };
 </script>
 <style lang="scss" scoped>
@@ -103,7 +99,6 @@ main {
 }
 header {
 	min-height: 36rem;
-	transition: all 0.45s ease-in;
 	position: relative;
 	background-repeat: no-repeat;
 	background-size: cover;
